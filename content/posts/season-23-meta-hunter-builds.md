@@ -21,17 +21,11 @@ Season 23 has brought significant changes to the Destiny 2 meta, and Hunters are
 
 This build focuses on maintaining near-constant invisibility while dealing massive damage through precision shots and void abilities.
 
-<BuildCard
-  title="Void Invisibility Hunter"
-  weapons={{
-    kinetic: "Arbalest",
-    energy: "Funnelweb",
-    power: "Falling Guillotine"
-  }}
-  exoticArmor="Graviton Forfeit"
-  gameMode="both"
-  difficulty="intermediate"
-/>
+**Void Invisibility Hunter**
+- **Weapons**: Arbalest (Kinetic), Funnelweb (Energy), Falling Guillotine (Power)
+- **Exotic Armor**: Graviton Forfeit
+- **Game Mode**: Both PvP and PvE
+- **Difficulty**: Intermediate
 
 ### Key Components
 
@@ -47,9 +41,7 @@ This build focuses on maintaining near-constant invisibility while dealing massi
 3. **Use grenades** to weaken large groups of enemies
 4. **Repeat the cycle** for near-constant stealth
 
-<InfoBox type="info">
-This build excels in both solo content and team play. In PvP, use the invisibility to flank enemies and secure picks. In PvE, you can revive teammates safely or handle dangerous objectives.
-</InfoBox>
+*This build excels in both solo content and team play. In PvP, use the invisibility to flank enemies and secure picks. In PvE, you can revive teammates safely or handle dangerous objectives.*
 
 ## The Solar Gunslinger
 
@@ -57,17 +49,11 @@ This build excels in both solo content and team play. In PvP, use the invisibili
 
 Maximum damage output through precision shots and solar ability synergy.
 
-<BuildCard
-  title="Solar Precision Hunter"
-  weapons={{
-    kinetic: "Austringer",
-    energy: "Calus Mini-Tool",
-    power: "Gjallarhorn"
-  }}
-  exoticArmor="Celestial Nighthawk"
-  gameMode="pve"
-  difficulty="beginner"
-/>
+**Solar Precision Hunter**
+- **Weapons**: Austringer (Kinetic), Calus Mini-Tool (Energy), Gjallarhorn (Power)
+- **Exotic Armor**: Celestial Nighthawk
+- **Game Mode**: PvE
+- **Difficulty**: Beginner
 
 ### Abilities and Fragments
 
@@ -88,17 +74,11 @@ Maximum damage output through precision shots and solar ability synergy.
 
 Perfect for activities with dense enemy spawns and challenging encounters.
 
-<BuildCard
-  title="Arc Staff Hunter"
-  weapons={{
-    kinetic: "Riskrunner",
-    energy: "Trinity Ghoul",
-    power: "Anarchy"
-  }}
-  exoticArmor="Raiju's Harness"
-  gameMode="pve"
-  difficulty="advanced"
-/>
+**Arc Staff Hunter**
+- **Weapons**: Riskrunner (Kinetic), Trinity Ghoul (Energy), Anarchy (Power)
+- **Exotic Armor**: Raiju's Harness
+- **Game Mode**: PvE
+- **Difficulty**: Advanced
 
 ### Playstyle Overview
 
@@ -111,9 +91,7 @@ This build transforms you into an arc-powered killing machine, chaining lightnin
 3. **Chain arc kills** to build up Ionic Traces
 4. **Deploy your super strategically** for maximum crowd control
 
-<InfoBox type="warning">
-Be careful not to overextend with this build. While you have incredible add-clear potential, you're vulnerable to high-damage enemies during your melee chains.
-</InfoBox>
+*Be careful not to overextend with this build. While you have incredible add-clear potential, you're vulnerable to high-damage enemies during your melee chains.*
 
 ## Mod Recommendations
 
@@ -125,11 +103,9 @@ Be careful not to overextend with this build. While you have incredible add-clea
 
 ### Specific Recommendations by Build
 
-| Build Type | Essential Mods | Alternative Options |
-|------------|----------------|-------------------|
-| Void Invisibility | Utility Kickstart, Recuperation | Dynamo, Distribution |
-| Solar Precision | Hands-On, Ashes to Assets | Impact Induction, Momentum Transfer |
-| Arc Staff | Melee Wellmaker, Elemental Charge | Well of Striking, Font of Might |
+**Void Invisibility**: Utility Kickstart, Recuperation (alternatives: Dynamo, Distribution)
+**Solar Precision**: Hands-On, Ashes to Assets (alternatives: Impact Induction, Momentum Transfer)
+**Arc Staff**: Melee Wellmaker, Elemental Charge (alternatives: Well of Striking, Font of Might)
 
 ## Conclusion
 
@@ -141,8 +117,6 @@ These Hunter builds represent the pinnacle of Season 23 optimization. Each offer
 - **PvP focused**: Master the Void Invisibility build
 - **PvE specialists**: The Arc Staff build is unmatched for add-clear
 
-<InfoBox type="success">
-Practice these builds in lower-stakes content before taking them into competitive or endgame activities. Understanding the timing and rhythm of each build is crucial for success.
-</InfoBox>
+*Practice these builds in lower-stakes content before taking them into competitive or endgame activities. Understanding the timing and rhythm of each build is crucial for success.*
 
 Stay tuned for our upcoming Titan and Warlock build guides, and don't forget to join our Discord community for build discussions and optimization tips!

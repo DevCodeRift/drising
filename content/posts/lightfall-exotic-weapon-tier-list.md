@@ -24,9 +24,7 @@ Our rankings consider multiple factors:
 - **Synergy** with current subclasses and builds
 - **Meta relevance** in endgame content
 
-<InfoBox type="info">
-Tier lists are inherently subjective and depend heavily on playstyle preferences. These rankings represent general consensus from high-level players and content creators.
-</InfoBox>
+*Tier lists are inherently subjective and depend heavily on playstyle preferences. These rankings represent general consensus from high-level players and content creators.*
 
 ## S-Tier: The Absolute Best
 
@@ -92,9 +90,7 @@ The hand cannon that never goes out of style.
 
 The arc bow that creates chain lightning.
 
-<InfoBox type="warning">
-Requires the catalyst to truly shine. Without it, Trinity Ghoul drops to C-tier.
-</InfoBox>
+*Requires the catalyst to truly shine. Without it, Trinity Ghoul drops to C-tier.*
 
 **Pros:**
 - Incredible add-clear with catalyst
@@ -109,12 +105,10 @@ Requires the catalyst to truly shine. Without it, Trinity Ghoul drops to C-tier.
 
 ### Top Combinations
 
-| Exotic Weapon | Best Paired With | Activity Type |
-|---------------|------------------|---------------|
-| Gjallarhorn | Explosive Light mods | Raids |
-| Osteo Striga | Necrotic Grip | All content |
-| Witherhoard | Auto-loading holster weapons | Solo play |
-| Arbalest | Elemental wells builds | Nightfalls |
+**Gjallarhorn** + Explosive Light mods = Perfect for Raids
+**Osteo Striga** + Necrotic Grip = Dominates all content
+**Witherhoard** + Auto-loading holster weapons = Solo play excellence
+**Arbalest** + Elemental wells builds = Nightfall champion
 
 ## PvP vs PvE Rankings
 
@@ -128,9 +122,7 @@ Requires the catalyst to truly shine. Without it, Trinity Ghoul drops to C-tier.
 2. **Witherhoard** - Versatility incarnate
 3. **Osteo Striga** - Add-clear champion
 
-<InfoBox type="success">
-Remember that personal skill and playstyle matter more than tier lists. A weapon you can use effectively is better than a highly-ranked weapon you struggle with.
-</InfoBox>
+*Remember that personal skill and playstyle matter more than tier lists. A weapon you can use effectively is better than a highly-ranked weapon you struggle with.*
 
 ## Seasonal Considerations
 
