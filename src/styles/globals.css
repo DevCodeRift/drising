@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-destiny-dark text-destiny-gray-100 font-sans antialiased;
+    background-image: radial-gradient(circle at 25% 25%, rgba(0, 102, 204, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 75%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+  }
+
+  * {
+    @apply border-destiny-gray-700;
+  }
+
+  ::selection {
+    @apply bg-destiny-primary text-white;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-destiny-gray-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-destiny-gray-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-destiny-primary;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-destiny-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-destiny-primary transition-all duration-200 ease-in-out;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-destiny-primary text-base font-medium rounded-md text-destiny-primary hover:bg-destiny-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-destiny-primary transition-all duration-200 ease-in-out;
+  }
+
+  .card {
+    @apply bg-destiny-gray-800 rounded-lg shadow-xl border border-destiny-gray-700 p-6 transition-all duration-300 hover:shadow-2xl hover:border-destiny-primary;
+  }
+
+  .hero-glow {
+    @apply relative before:absolute before:inset-0 before:rounded-lg before:p-px before:bg-gradient-to-r before:from-destiny-primary before:via-destiny-accent-solar before:to-destiny-primary;
+  }
+
+  .hero-glow > * {
+    @apply relative bg-destiny-dark rounded-lg;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-destiny-primary via-destiny-accent-solar to-destiny-primary bg-clip-text text-transparent;
+  }
+
+  .nav-link {
+    @apply text-destiny-gray-300 hover:text-destiny-primary transition-colors duration-200 relative;
+  }
+
+  .nav-link::after {
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-destiny-primary transition-all duration-300 content-[''];
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+}
+
+/* Custom animations for enhanced visual appeal */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Loading states */
+.skeleton {
+  @apply animate-pulse bg-destiny-gray-700 rounded;
+}
+
+/* Focus styles for accessibility */
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-destiny-primary ring-offset-2 ring-offset-destiny-dark;
+}
