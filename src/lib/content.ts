@@ -14,22 +14,17 @@ export function getAllPostSlugs(): string[] {
 
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames
-    .filter(name => name.endsWith('.mdx') || name.endsWith('.md'))
-    .map(name => name.replace(/\.(mdx|md)$/, ''));
+    .filter(name => name.endsWith('.md'))
+    .map(name => name.replace(/\.md$/, ''));
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {
   try {
-    const realSlug = slug.replace(/\.mdx?$/, '');
-    const fullPath = path.join(postsDirectory, `${realSlug}.mdx`);
+    const realSlug = slug.replace(/\.md$/, '');
+    const fullPath = path.join(postsDirectory, `${realSlug}.md`);
 
     if (!fs.existsSync(fullPath)) {
-      // Try .md extension
-      const mdPath = path.join(postsDirectory, `${realSlug}.md`);
-      if (!fs.existsSync(mdPath)) {
-        return null;
-      }
-      return getPostFromFile(mdPath, realSlug);
+      return null;
     }
 
     return getPostFromFile(fullPath, realSlug);
@@ -47,11 +42,14 @@ function getPostFromFile(filePath: string, slug: string): BlogPost {
   // Create excerpt from content if not provided
   const excerpt = data.excerpt || createExcerpt(content);
 
+  // Convert markdown to basic HTML
+  const htmlContent = markdownToHtml(content);
+
   return {
     slug,
     title: data.title || '',
     description: data.description || excerpt,
-    content,
+    content: htmlContent,
     publishedAt: data.publishedAt || data.date || new Date().toISOString(),
     updatedAt: data.updatedAt,
     author: data.author || 'Anonymous',
@@ -62,6 +60,29 @@ function getPostFromFile(filePath: string, slug: string): BlogPost {
     readingTime: stats.minutes,
     excerpt,
   };
+}
+
+function markdownToHtml(markdown: string): string {
+  return markdown
+    // Headers
+    .replace(/^### (.*$)/gim, '<h3 class="text-xl font-semibold text-white mt-6 mb-3">$1</h3>')
+    .replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold text-white mt-8 mb-4">$1</h2>')
+    .replace(/^# (.*$)/gim, '<h1 class="text-3xl font-bold text-white mb-6">$1</h1>')
+    // Bold and italic
+    .replace(/\*\*(.*)\*\*/gim, '<strong class="text-white font-semibold">$1</strong>')
+    .replace(/\*(.*)\*/gim, '<em class="italic">$1</em>')
+    // Links
+    .replace(/\[([^\]]*)\]\(([^)]*)\)/gim, '<a href="$2" class="text-destiny-primary hover:text-destiny-accent-solar transition-colors underline">$1</a>')
+    // Code blocks (simple)
+    .replace(/```([\s\S]*?)```/gim, '<pre class="bg-destiny-gray-900 border border-destiny-gray-700 rounded-lg p-4 mb-6 overflow-x-auto text-sm"><code>$1</code></pre>')
+    // Inline code
+    .replace(/`([^`]*)`/gim, '<code class="bg-destiny-gray-800 text-destiny-accent-solar px-2 py-1 rounded text-sm">$1</code>')
+    // Lists
+    .replace(/^\* (.*$)/gim, '<li class="mb-1">$1</li>')
+    // Paragraphs (basic)
+    .replace(/\n\n/gim, '</p><p class="text-destiny-gray-300 mb-4 leading-relaxed">')
+    // Wrap in initial paragraph
+    .replace(/^(.*)/, '<p class="text-destiny-gray-300 mb-4 leading-relaxed">$1</p>');
 }
 
 function createExcerpt(content: string, maxLength: number = 160): string {

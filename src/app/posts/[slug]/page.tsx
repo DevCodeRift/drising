@@ -1,17 +1,14 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NextSeo } from 'next-seo';
-import { MDXRemote } from 'next-mdx-remote/rsc';
 import { format } from 'date-fns';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getPostBySlug, getAllPostSlugs, getRelatedPosts } from '@/lib/content';
 import { getBlogPostSEO, getStructuredData } from '@/lib/seo';
-import { useMDXComponents } from '../../mdx-components';
 import RelatedPosts from '@/components/RelatedPosts';
 import ShareButtons from '@/components/ShareButtons';
-import TableOfContents from '@/components/TableOfContents';
 
 interface Props {
   params: {
@@ -106,7 +103,6 @@ export default function PostPage({ params }: Props) {
   });
 
   const relatedPosts = getRelatedPosts(post);
-  const components = useMDXComponents({});
 
   return (
     <>
@@ -220,18 +216,14 @@ export default function PostPage({ params }: Props) {
           </header>
 
           {/* Article Content */}
-          <div className="lg:grid lg:grid-cols-4 lg:gap-8">
-            {/* Table of Contents - Desktop */}
-            <aside className="hidden lg:block lg:col-span-1">
-              <div className="sticky top-32">
-                <TableOfContents content={post.content} />
-              </div>
-            </aside>
-
+          <div className="lg:grid lg:grid-cols-1 lg:gap-8">
             {/* Main Content */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-1">
               <div className="prose prose-lg max-w-none">
-                <MDXRemote source={post.content} components={components} />
+                <div
+                  className="content-area"
+                  dangerouslySetInnerHTML={{ __html: post.content }}
+                />
               </div>
 
               {/* Updated Date */}
