@@ -75,13 +75,13 @@ const featuredBuilds = [
   },
 ];
 
-const classColors = {
+const classColors: Record<string, string> = {
   hunter: 'from-blue-500 to-cyan-400',
   titan: 'from-orange-500 to-red-400',
   warlock: 'from-purple-500 to-pink-400',
 };
 
-const subclassIcons = {
+const subclassIcons: Record<string, string> = {
   solar: '☀️',
   void: '🌑',
   arc: '⚡',
@@ -89,7 +89,7 @@ const subclassIcons = {
   strand: '🕸️',
 };
 
-const difficultyColors = {
+const difficultyColors: Record<string, string> = {
   beginner: 'bg-green-500/20 text-green-400 border-green-500/30',
   intermediate: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
   advanced: 'bg-red-500/20 text-red-400 border-red-500/30',
