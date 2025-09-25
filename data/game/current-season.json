@@ -1,0 +1,71 @@
+{
+  "id": "season-23",
+  "number": 23,
+  "name": "Season of the Wish",
+  "startDate": "2024-01-15T17:00:00Z",
+  "endDate": "2024-04-15T17:00:00Z",
+  "active": true,
+  "expansion": "Lightfall",
+  "artifact": {
+    "id": "queensfoil-censer",
+    "name": "Queensfoil Censer",
+    "description": "An ancient Awoken artifact imbued with wish magic",
+    "mods": [
+      {
+        "id": "anti-barrier-auto-rifle",
+        "name": "Anti-Barrier Auto Rifle",
+        "column": 1,
+        "row": 1,
+        "type": "Anti-Champion",
+        "description": "Auto Rifles fire shield-piercing rounds and stun Barrier Champions",
+        "effect": "Auto Rifles gain Anti-Barrier capabilities",
+        "unlockCost": 1,
+        "prerequisites": []
+      },
+      {
+        "id": "unstoppable-hand-cannon",
+        "name": "Unstoppable Hand Cannon",
+        "column": 1,
+        "row": 2,
+        "type": "Anti-Champion",
+        "description": "Aiming down sights loads explosive rounds that stun Unstoppable Champions",
+        "effect": "Hand Cannons gain Unstoppable capabilities",
+        "unlockCost": 1,
+        "prerequisites": []
+      },
+      {
+        "id": "overload-bow",
+        "name": "Overload Bow",
+        "column": 1,
+        "row": 3,
+        "type": "Anti-Champion",
+        "description": "Bows pierce through combatant shields and stun Overload Champions",
+        "effect": "Bows gain Overload capabilities",
+        "unlockCost": 1,
+        "prerequisites": []
+      },
+      {
+        "id": "origin-spec",
+        "name": "Origin Spec",
+        "column": 2,
+        "row": 1,
+        "type": "Weapon",
+        "description": "Weapons with origin traits deal increased damage",
+        "effect": "+20% damage for weapons with origin traits",
+        "unlockCost": 3,
+        "prerequisites": ["anti-barrier-auto-rifle"]
+      },
+      {
+        "id": "authorized-mods-solar",
+        "name": "Authorized Mods: Solar",
+        "column": 3,
+        "row": 1,
+        "type": "Armor",
+        "description": "Solar armor mods cost 1 less energy",
+        "effect": "Solar mods cost -1 energy",
+        "unlockCost": 6,
+        "prerequisites": ["origin-spec"]
+      }
+    ]
+  }
+}

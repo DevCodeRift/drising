@@ -7,7 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "update-data": "node scripts/update-data.js",
+    "update-data:force": "node scripts/update-data.js --force",
+    "validate-data": "node scripts/validate-data.js",
+    "data:update": "npm run update-data",
+    "data:validate": "npm run validate-data",
+    "data:backup": "node scripts/update-data.js --backup-only"
   },
   "dependencies": {
     "next": "14.2.5",
