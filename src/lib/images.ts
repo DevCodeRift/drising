@@ -109,7 +109,8 @@ export const DESTINY_PLACEHOLDERS = {
 // Image component with error handling and fallbacks
 export function getImageWithFallback(src: string, category: keyof typeof DESTINY_PLACEHOLDERS = 'og'): string {
   if (!src || src === '') {
-    return DESTINY_PLACEHOLDERS[category].default || DESTINY_PLACEHOLDERS.og.default;
+    // Return the default image from og category
+    return DESTINY_PLACEHOLDERS.og.default;
   }
 
   // If it's already a placeholder or external URL, return as-is
