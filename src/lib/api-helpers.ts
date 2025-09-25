@@ -157,16 +157,18 @@ export function requireAuth(request: Request): boolean {
   return apiKey === validApiKey;
 }
 
-export function corsHeaders(request: Request) {
+export function corsHeaders(request: Request): Record<string, string> {
   const origin = request.headers.get('origin');
   const allowedOrigins = [
     'http://localhost:3000',
     'https://destiny-rising-builds.vercel.app',
     process.env.NEXT_PUBLIC_SITE_URL
-  ].filter(Boolean);
+  ].filter(Boolean) as string[];
+
+  const allowedOrigin = allowedOrigins.includes(origin || '') ? origin : allowedOrigins[0];
 
   return {
-    'Access-Control-Allow-Origin': allowedOrigins.includes(origin || '') ? origin : allowedOrigins[0],
+    'Access-Control-Allow-Origin': allowedOrigin || allowedOrigins[0] || 'http://localhost:3000',
     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-api-key',
   };
