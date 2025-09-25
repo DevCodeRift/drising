@@ -1,4 +1,3 @@
-import { NextSeo } from 'next-seo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
@@ -12,24 +11,6 @@ export default function HomePage() {
 
   return (
     <>
-      <NextSeo
-        title="Destiny Rising Builds - Best Destiny 2 Builds & Guides"
-        description="Discover top-tier Destiny 2 builds for PvP and PvE. Find the latest weapon guides, exotic reviews, and seasonal meta analysis. Your ultimate Destiny 2 resource."
-        canonical="/"
-        openGraph={{
-          title: 'Destiny Rising Builds - Best Destiny 2 Builds & Guides',
-          description: 'Discover top-tier Destiny 2 builds for PvP and PvE. Find the latest weapon guides, exotic reviews, and seasonal meta analysis.',
-          images: [
-            {
-              url: '/images/og-homepage.jpg',
-              width: 1200,
-              height: 630,
-              alt: 'Destiny Rising Builds Homepage',
-            },
-          ],
-        }}
-      />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

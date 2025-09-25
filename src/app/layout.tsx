@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
-import { DefaultSeo } from 'next-seo';
 import { Inter, Orbitron } from 'next/font/google';
-import { defaultSEO, getStructuredData } from '@/lib/seo';
+import { getStructuredData } from '@/lib/seo';
 import '@/styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -85,7 +84,6 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-destiny-dark text-destiny-gray-100">
-        <DefaultSeo {...defaultSEO} />
         <div className="relative">
           {/* Background gradient overlay */}
           <div className="fixed inset-0 bg-hero-pattern opacity-50 pointer-events-none" />

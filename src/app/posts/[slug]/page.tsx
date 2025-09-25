@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { NextSeo } from 'next-seo';
 import { format } from 'date-fns';
 
 import Header from '@/components/Header';
@@ -106,8 +105,6 @@ export default function PostPage({ params }: Props) {
 
   return (
     <>
-      <NextSeo {...seoData} />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
