@@ -172,8 +172,8 @@ export function corsHeaders(request: Request) {
   };
 }
 
-export function withCors(handler: (request: Request) => Promise<NextResponse>) {
-  return async (request: Request) => {
+export function withCors<T extends Request>(handler: (request: T) => Promise<NextResponse>) {
+  return async (request: T) => {
     if (request.method === 'OPTIONS') {
       return new NextResponse(null, {
         status: 200,
